@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Day</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #2d1047, #5b2e91);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .Heading {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 20px;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 1s ease-in-out;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            gap: 30px;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .body {
+            font-size: 1.3rem;
+            max-width: 600px;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 1.5s ease-in-out;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .image {
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 1.5s ease-in-out;
+            text-align: center;
+        }
+
+        .image img {
+            width: 280px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Floating emoji animation */
+        .emoji {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 6s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        /* 📱 Mobile Responsive Fix */
+        @media (max-width: 768px) {
+            .Heading {
+                font-size: 1.8rem;
+                margin: 15px;
+            }
+
+            .body {
+                font-size: 1rem;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .content {
+                flex-direction: column;
+                padding: 15px;
+                gap: 20px;
+            }
+
+            .image img {
+                width: 200px;
+            }
+
+            .emoji {
+                font-size: 1.5rem;
+                /* smaller emojis on phone */
+            }
+
+        }
+               .my {
+                text-align: center;
+                width: 100%;
+                margin-top: 30px;
+                font-size: 1.5rem;
+            }
+    </style>
+</head>
+
+<body>
+    <h1 class="Heading">🌸 Happy Teacher's Day 🌸</h1>
+
+    <div class="content">
+        <div class="body">
+            <p>
+                ➗✖️ Respected Mam, your way of teaching Maths makes even the toughest problems easy and interesting! 🧮✨
+                Thank you for guiding us with patience, logic, and inspiration. 📘🌟🙏
+                <br><br> 🌟 Wishing you happiness and respect on this special day! 🌟
+            </p>
+        </div>
+
+        <div class="image">
+            <img src="image/ChatGPT Image Sep 5, 2025, 10_13_05 AM.png" alt="Teacher Image">
+        </div>
+    </div>
+    <div class="my">  
+        <H2>From Vansh Kulshrestha</H2>
+    </div>
+
+    <script>
+        // Slide-up animation on page load
+        window.onload = () => {
+            document.querySelector(".Heading").style.opacity = "1";
+            document.querySelector(".Heading").style.transform = "translateY(0)";
+            document.querySelector(".body").style.opacity = "1";
+            document.querySelector(".body").style.transform = "translateY(0)";
+            document.querySelector(".image").style.opacity = "1";
+            document.querySelector(".image").style.transform = "translateY(0)";
+        };
+
+        // Floating emojis generator
+        function createEmoji() {
+            const emojiList = ["🌸", "🌟", "📚", "🎉", "🌍", "❤️"];
+            const emoji = document.createElement("div");
+            emoji.classList.add("emoji");
+            emoji.innerText = emojiList[Math.floor(Math.random() * emojiList.length)];
+            emoji.style.left = Math.random() * window.innerWidth + "px";
+            emoji.style.animationDuration = (4 + Math.random() * 3) + "s";
+            document.body.appendChild(emoji);
+
+            setTimeout(() => {
+                emoji.remove();
+            }, 7000);
+        }
+
+        setInterval(createEmoji, 1500);
+    </script>
+</body>
+
+</html>

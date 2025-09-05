@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important for mobile -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #072566, #065f9b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      color: white;
+      text-align: center;
+      padding: 15px; /* so content doesn't touch screen edges */
+    }
+    .welcome-box {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+      max-width: 500px; /* desktop limit */
+      width: 100%;       /* mobile full width */
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .welcome-box a {
+      background-color: white;
+      color: #072566;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .welcome-box a:hover {
+      background-color: whitesmoke;
+    }
+
+    /* 📱 Mobile Responsiveness */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .welcome-box {
+        padding: 20px;
+      }
+      .welcome-box a {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-box">
+    <h1>🎉 Welcome, Swapnil Ma'am!</h1>
+    <p>You have successfully logged in 🚀</p>
+    <a href="next.html">Next</a>
+  </div>
+</body>
+</html>
